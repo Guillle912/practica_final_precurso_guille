@@ -59,13 +59,12 @@ header nav .menu{
 
     padding: calc( var(--space) * 2) 0;
 }
-
 header .container{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     font-size: 1.75em;
-    padding: 0 1.25em;
+    padding: 0 1.25rem;
 }
 
 header .container>a{
@@ -103,6 +102,15 @@ header .container ul{
 
 /* Fin header */
 
+/* Inicio footer */
+
+
+/* Final footer */
+
+footer .container{
+    
+    padding: 0 1.25rem;
+}
 
 /* Mediaqueries */
 
@@ -138,4 +146,14 @@ header .container ul{
     }
 }
 
+
+@media (width >= 1400px){
+    header .container{
+        padding: 0;
+    }
+
+    footer .container{
+        padding: 0;
+    }
+}
 /* Fin Mediaqueries */
