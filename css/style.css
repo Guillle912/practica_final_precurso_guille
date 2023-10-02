@@ -1,10 +1,10 @@
 @import url('reset.css');
 @import url(https://fonts.googleapis.com/css?family=Rasa:300,regular,500,600,700,300italic,italic,500italic,600italic,700italic);
 
-:root{
-    --font-principal:'Rasa', serif;
+:root {
+    --font-principal: 'Rasa', serif;
     --color-principal: #414141;
-    --color-secondary:#c9c9c9;
+    --color-secondary: #c9c9c9;
     --max-width: 87.5rem;
     --space: 1.25rem;
     --color-button: #eeeeee;
@@ -12,32 +12,32 @@
 
 
 
-img{
+img {
     width: 100%;
     height: auto;
     display: block;
     filter: grayscale(100%);
     transition: all 1s;
 
-    &:hover{
+    &:hover {
         filter: grayscale(0%);
     }
 }
 
 
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: var(--font-principal);
     font-weight: 300;
     color: var(--color-principal);
     font-size: 1em;
 }
 
-.container{
+.container {
     max-width: var(--max-width);
     margin: 0 auto;
 }
@@ -46,7 +46,7 @@ body{
 /* Inicio header */
 
 
-header{
+header {
     padding-top: 2em;
     background-color: rgba(255, 255, 255, 0.8);
     position: sticky;
@@ -55,11 +55,12 @@ header{
 
 }
 
-header nav .menu{
+header nav .menu {
 
-    padding: calc( var(--space) * 2) 0;
+    padding: calc(var(--space) * 2) 0;
 }
-header .container{
+
+header .container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -67,35 +68,36 @@ header .container{
     padding: 0 1.25rem;
 }
 
-header .container>a{
+header .container>a {
     display: inline-block;
     text-decoration: none;
     color: var(--color-principal);
     width: 50%;
 }
 
-header .container div{
+header .container div {
     text-align: end;
     width: 50%;
 }
 
-header .container ul{
+header .container ul {
     width: 100%;
     text-align: center;
 
-    & li{
+    & li {
         padding-top: var(--space);
     }
-    .activo{
+
+    .activo {
         color: black;
         font-weight: 500;
     }
-    
-    & a{
+
+    & a {
         display: inline-block;
         text-decoration: none;
         color: var(--color-principal);
-        
+
     }
 }
 
@@ -103,32 +105,94 @@ header .container ul{
 /* Fin header */
 
 /* Inicio hero */
-    .hero{
-        background: url(../images/fondo.png);
-        height: 80vh;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1.25rem;
-        
-        & h1{
-            text-align: center;
-            font-size: 3em;
-            line-height: 1.4em;
-        }
+.hero {
+    background: url(../images/fondo.png);
+    height: 80vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem;
+
+    & h1 {
+        text-align: center;
+        font-size: 3em;
+        line-height: 1.4em;
     }
+}
 
 /* Fin hero */
 
+/* Inicio Projects */
+main #projects .container h2{
+    text-align: center;
+}
+main #projects .grid{
+    display: grid;
+    gap: var(--space);
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-columns: 1fr;
+}
 
+main #projects .grid article{
+    filter: grayscale(100%);
+    transition: 1s;
+    display: flex;
+    align-items: end;
+
+    & h3{
+        padding-left: 0.8rem;
+        transition: all 1s;
+        color: transparent;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    &:hover{
+        filter: grayscale(0%);
+
+        & h3{
+            padding-left: 1.25rem;
+            color: var(--color-principal);
+        }
+    }
+}
+
+main #projects .grid article:first-child{
+    background-image: url('../images/vase-wooden.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 50vh;
+    overflow: hidden;
+}
+
+main #projects .grid article:last-child{
+    background-image: url('../images/coo-coo-clock.png');
+    background-size: cover;
+     background-position: center center;
+     overflow: hidden; /* mascara de recorte */
+}
+
+main #projects .grid article:nth-child(2){
+    background-image: url('../images/bottle-gradient-2.jpg');
+    background-size: cover;
+     background-position: center center;
+     overflow: hidden; /* mascara de recorte */
+}
+
+main section h2{
+    font-weight: 500;
+    font-size: 3.5em;
+    padding-bottom: 2.5em;
+}
+
+/* Fin Projects */
 
 
 
 /* Inicio footer */
 
-footer .container{
-    
+footer .container {
+
     padding: 0 1.25rem;
 }
 
@@ -137,30 +201,30 @@ footer .container{
 
 /* Mediaqueries */
 
-@media(width >= 48rem) {
+@media(width >=48rem) {
 
-    header .container{
+    header .container {
         flex-direction: row-reverse;
     }
 
-    header .container>a{
+    header .container>a {
         width: 20%;
         text-align: end;
     }
-    
-    header .container div{
+
+    header .container div {
         display: none;
-        
+
     }
 
-    header .container ul{
-        
+    header .container ul {
+
         width: 80%;
         text-align: start;
         padding: 0;
-        
 
-        & li{
+
+        & li {
             text-align: left;
             padding-top: 0;
             padding-right: var(--space);
@@ -168,25 +232,47 @@ footer .container{
         }
     }
 
-    .hero{
-        & h1{
+    .hero {
+        & h1 {
             width: 40%;
         }
+    }
+
+    main #projects .grid{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main #projects .grid  article:last-child{
+        grid-column: 2;
+        grid-row: 1/3;
+    }
+
+    main #projects .container h2{
+        text-align: start;
     }
 }
 
 
-@media (width >= 1400px){
-    header .container{
+@media (width >=1400px) {
+    header .container {
         padding: 0;
     }
-    .hero{
-        & h1{
+
+    .hero {
+        & h1 {
             width: 40%;
         }
     }
-    footer .container{
+
+    .projects .container {
+
+        padding: 0;
+    }
+
+    footer .container {
         padding: 0;
     }
 }
+
 /* Fin Mediaqueries */
