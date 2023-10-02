@@ -10,6 +10,8 @@
     --color-button: #eeeeee;
 }
 
+
+
 img{
     width: 100%;
     height: auto;
@@ -66,7 +68,7 @@ header .container{
     padding: 0 1.25em;
 }
 
-header .container a{
+header .container>a{
     display: inline-block;
     text-decoration: none;
     color: var(--color-principal);
@@ -92,9 +94,48 @@ header .container ul{
     
     & a{
         display: inline-block;
+        text-decoration: none;
+        color: var(--color-principal);
         
     }
 }
 
 
 /* Fin header */
+
+
+/* Mediaqueries */
+
+@media(width >= 48rem) {
+
+    header .container{
+        flex-direction: row-reverse;
+    }
+
+    header .container>a{
+        width: 20%;
+        text-align: end;
+    }
+    
+    header .container div{
+        display: none;
+        
+    }
+
+    header .container ul{
+        
+        width: 80%;
+        text-align: start;
+        padding: 0;
+        
+
+        & li{
+            text-align: left;
+            padding-top: 0;
+            padding-right: var(--space);
+            display: inline-block;
+        }
+    }
+}
+
+/* Fin Mediaqueries */
