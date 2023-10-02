@@ -102,15 +102,38 @@ header .container ul{
 
 /* Fin header */
 
+/* Inicio hero */
+    .hero{
+        background: url(../images/fondo.png);
+        height: 80vh;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1.25rem;
+        
+        & h1{
+            text-align: center;
+            font-size: 3em;
+            line-height: 1.4em;
+        }
+    }
+
+/* Fin hero */
+
+
+
+
+
 /* Inicio footer */
-
-
-/* Final footer */
 
 footer .container{
     
     padding: 0 1.25rem;
 }
+
+/* Final footer */
+
 
 /* Mediaqueries */
 
@@ -144,6 +167,12 @@ footer .container{
             display: inline-block;
         }
     }
+
+    .hero{
+        & h1{
+            width: 40%;
+        }
+    }
 }
 
 
@@ -151,7 +180,11 @@ footer .container{
     header .container{
         padding: 0;
     }
-
+    .hero{
+        & h1{
+            width: 40%;
+        }
+    }
     footer .container{
         padding: 0;
     }
