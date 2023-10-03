@@ -212,7 +212,6 @@ footer .container {
         align-items: center;
         flex-direction: column;
         width: 100%;
-        
         text-align: center;
         gap: var(--space);
 
@@ -259,29 +258,53 @@ footer .container {
 /* INICIO MAIN */
 
 .about .section-about{
+    width: 90%;
     height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: #41414125;
+    padding: 0 2.5em;
 }
 
 
 main .section-about>h3{
+        
         font-size: 1.5rem;
     }
 
-
+.our-expertise{
+    width: 90%;
+    & h2{
+        padding: 50px 0;
+        text-align: center;
+    }
+}
 
 .flex {
     display: flex;
     flex-wrap: wrap;
-
     gap: var(--space);
 
     & article{
         width: 100%;
-        background-color: #414141;
+        display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-direction: column;
+
+            & figure{
+                width: 30%;
+            }
+
+            & div{
+                padding: 30px 0;
+                text-align: center;
+                & h3{
+                    font-weight: 700;
+                }
+            }
     }
 }    
 /* FIN MAIN */
@@ -345,25 +368,30 @@ main .section-about>h3{
     .hero2 {
         & .container{
 
-        
-    
         & article {
             width: calc(25% - var(--space));
-            height: 50vh;
+            height: 40vh;
+            margin-bottom:30px ;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            position: relative;
             
             & div{
-                margin-top: auto;
+                position: absolute;
+                bottom: 0;
                 
             }
             
             & figure {
+                position: absolute;
+                width: 235px;
+                
+                top: 0;
                 width: 100%;
-                transition: all 1s;
+                transition: all 1.5s;
                 
                 
                 &:hover{
@@ -371,13 +399,9 @@ main .section-about>h3{
                     height: 235px;
                     transform: rotate(45deg);
                     
-                    
-                    
                     & img{
-                        transform: rotate(0deg);
-                        
+                        transform: rotate(0deg);    
                     }
-
                 }
                 
                 & img{
@@ -402,6 +426,12 @@ main .section-about>h3{
         gap: var(--space);
         
     }
+
+    .our-expertise h2{
+        text-align: start;
+        padding-bottom: 0;
+        padding-top: 2.5em;
+    }
     
     .flex {
         display: flex;
@@ -410,8 +440,25 @@ main .section-about>h3{
         gap: var(--space);
     
         & article{
+            
             width: calc(33.333% - var(--space));
-            background-color: #414141;
+            
+            display: flex;
+            justify-content:center;
+            align-items: start;
+            flex-direction: column;
+
+            & figure{
+                width: 30%;
+            }
+
+            & div{
+                text-align: start;
+                padding: 30px 0;
+                & h3{
+                    font-weight: 700;
+                }
+            }
         }
     }  
     
