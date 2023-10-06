@@ -10,6 +10,7 @@
     --colorButton: #eeeeee;
 }
 
+
 img{
     width: 100%;
     height: auto;
@@ -361,7 +362,7 @@ main #news .flex article a h3{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #41414125;
+    background-color: #c0bcbc25;
     padding: 0 2.5em;
 }
 
@@ -409,6 +410,36 @@ main .section-about>h3{
 }    
 
 /* Fin section about */
+/* inicio section about */
+    .work>h2{
+        font-size: 35px;
+    }
+
+    .work>p{
+        padding-top: 20px;
+    }
+
+    .work>div{
+        width: 100%;
+        display: flex;
+
+        & div{
+            color: var(--secondaryColor);
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            &:hover{
+                color: var(--mainColor);
+                border-bottom: 2px solid var(--mainColor);
+            }
+        }
+
+    }
+
+    
+/* fin section about */
 
 
 /* fin de about */
@@ -572,6 +603,10 @@ main .section-about>h3{
             }
         }
     }  
+    
+    .work>h2{
+        font-size: 50px;
+    }
     
     
 }
