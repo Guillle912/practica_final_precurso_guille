@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .giro figure {
+            /*optativos para ejemplo*/
+            margin: 200px;
+            max-width: 200px;
+            /*optativos para ejemplo*/
+            transform: rotate(45deg);
+            overflow: hidden;
+            transition: 1s;
+        }
+
+        .giro figure img {
+            transform: rotate(-45deg) scale(2);
+            transition: 1s;
+        }
+
+        .giro:hover :is(figure, img) {
+            transform: rotate(0deg)
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="giro">
+        <figure>
+            <img src="./ejercicio_3/images/chica.jpg" alt="">
+        </figure>
+    </div>
+
+
+</body>
+
+</html>
