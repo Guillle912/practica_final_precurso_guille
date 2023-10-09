@@ -429,11 +429,16 @@ main .section-about>h3{
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 30px;
             
             &:hover{
                 color: var(--mainColor);
                 border-bottom: 2px solid var(--mainColor);
             }
+        }
+
+        & p{
+            font-size: 25px;
         }
 
     }
